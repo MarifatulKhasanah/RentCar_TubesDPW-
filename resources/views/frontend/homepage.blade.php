@@ -38,11 +38,15 @@
           class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center"
         >
         @foreach($cars as $car)
-          <div class="col mb-5">
-            <div class="card h-100">
+          <div class="col mb-5" style="width: 350px">
+            <div class="card h-100" >
               <!-- Sale badge-->
-              <div class="badge badge-custom {{$car->status == 'tersedia' ? 'bg-success' : 'bg-danger'}} text-white position-absolute" style="top: 0; right: 0">
-              {{$car->status}}
+              <div class="badge badge-custom text-uppercase {{$car->status == '1' ? 'bg-success' : 'bg-danger'}} text-white position-absolute" style="top: 0; right: 0">
+                @if($car->status == '1')
+                Available
+                @else
+                Not Available
+                @endif
               </div>
             <!-- Product image-->
             <img
@@ -75,8 +79,15 @@
               <li
               class="border-bottom p-2 d-flex justify-content-between"
               >
+              
               <span>Transmission</span>
-              <span style="font-weight: 600">{{$car->transmisi}}</span>
+                <span class="text-uppercase" style="font-weight: 600">
+                  @if($car->transmisi == '1')
+                  Manual
+                  @else
+                  Automatic
+                  @endif
+                </span>
             </li>
           </ul>
         </div>

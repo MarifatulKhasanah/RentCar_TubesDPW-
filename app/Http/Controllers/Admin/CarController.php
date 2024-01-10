@@ -34,18 +34,18 @@ class CarController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nama_mobil' => 'required',
-            'harga_sewa' => 'required',
+            'nama_mobil' => 'required|string',
+            'harga_sewa' => 'required|numeric',
             'gambar' => 'required',
-            'bahan_bakar' => 'required',
-            'jumlah_kursi' => 'required',
-            'transmisi' => 'nullable',
-            'status' => 'required',
+            'bahan_bakar' => 'required|string',
+            'jumlah_kursi' => 'required|numeric',
+            'transmisi' => 'required|numeric',
+            'status' => 'required|numeric',
             'deskripsi' => 'required',
-            'p3k' =>'required',
-            'charger' => 'required',
-            'audio' => 'required',
-            'ac' => 'required',
+            'p3k' =>'required|numeric',
+            'charger' => 'required|numeric',
+            'audio' => 'required|numeric',
+            'ac' => 'required|numeric',
         ]);
 
         $cars = new Car();
@@ -81,7 +81,6 @@ class CarController extends Controller
      */
     public function edit($id)
     {
-
         $cars = Car::find($id);
 
         if(!$cars){
@@ -133,6 +132,9 @@ class CarController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $cars = Car::find($id);
+        $cars->delete();
+        return redirect()->route('index')->with('success', 'Berhasil menghapus data');
     }
+
 }

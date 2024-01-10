@@ -3,8 +3,8 @@
 <div>
     <div class="card">
         <div class="card-header d-flex justify-content-between aign-items-center">
-            <h3>Daftar Mobil</h3>
-            <a href="{{ route('create') }}" class="btn btn-primary">Tambah Data</a>
+            <h3>Pesan Masuk</h3>
+
         </div>
         <div class = "card-body">
             <div class ="table-responsive">
@@ -12,37 +12,28 @@
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>Nama Mobil</th>
-                        <th>Gambar Mobil</th>
-                        <th>Harga Sewa</th>
-                        <th>Status Mobil</th>
+                        <th>Nama Lengkap</th>
+                        <th>Email</th>
+                        <th>Subjek</th>
+                        <th>Pesan</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>  
                 <tbody>
-                    @forelse($cars as $car)
+                    @forelse($contacts as $contact)
                     <tr>
                         <td> {{ $loop->iteration}}</td>
-                        <td> {{$car->nama_mobil }}</td>
+                        <td> {{$contact->nama_lengkap }}</td>
+                        <td> {{$contact->email }}</td>
+                        <td> {{$contact->subjek_email }}</td>
+                        <td> {{$contact->pesan }}</td>
                         <td>
-                            <img src="{{ URL('frontend/assets/Mobil/' . $car->gambar . '') }}" width="200" alt="">
-                        </td>
-                        <td>Rp. {{number_format($car->harga_sewa, 0, ',' , '.')}}</td>
-                        <td>
-                            @if($car->status == '1')
-                            Available
-                            @else
-                            Not Available
-                            @endif
-                        </td>
-                        <td>
-                            <a href="{{route('edit', $car->id)}}" class="btn btn-sm btn-warning">Edit</a>
-                            <a id="btn-delete" href="{{route('destroy', $car->id)}}" type="submit" class="btn btn-sm btn-danger">Delete</a>
+                            <a id="btn-delete" href="{{route('destroyMessage', $contact->id)}}" class="btn btn-sm btn-danger">Delete</a>
                         </td>
                     </tr>
                     @empty
                     <tr>
-                        <td colspan="6" class="text-center">Data Kosong</td>
+                        <td colspan="6" class="text-center">Pesan Kosong</td>
                     </tr>
                     @endforelse 
                 </tbody>

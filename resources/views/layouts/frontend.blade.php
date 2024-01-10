@@ -26,18 +26,6 @@
     <link rel="stylesheet" href="{{asset('frontend/css/custom.css')}}" />
   </head>
   <body>
-    <!-- Navigation-->
-    <!-- Header-->
-    <!-- <header class="bg-dark py-5">
-      <div class="container px-4 px-lg-5 my-5">
-        <div class="text-center text-white">
-          <h1 class="display-4 fw-bolder">Drivvy</h1>
-          <p class="fw-normal">
-            “Rent, Ride, Relax”
-          </p>
-        </div>
-      </div>
-    </header> -->
     @yield('content')
         <!-- Footer-->
     <div class="footer-basic">
@@ -58,5 +46,6 @@
   <script src="{{ asset('frontend/js/bootstrap.js') }}"></script>
     <!-- Core theme JS-->
     <script src="{{ asset('frontend/js/scripts.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>

@@ -41,7 +41,7 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto">
@@ -80,24 +80,26 @@
 
   <section id="services"> 
     <div class="container">
-        <div class="row">
+        <div class="d-flex gap-5">
             <div class="col-md-5 imageServices">
                 <div class="col-md-6 covs">
-                    <div class="row">
+                  <div class="d-flex flex-column gap-3">
+                    <div>
                         <img class="cov3 img-fluid" src="{{asset('frontend/assets/cover3.jpg')}}" alt="sofa1">
                     </div>
-                    <div class="row">
+                    <div>
                         <img class="cov2 img-fluid" src="{{asset('frontend/assets/cover2.jpg')}}" alt="sofa2">
                     </div>
+                  </div>
                     <img class="cov1 img-fluid" src="{{asset('frontend/assets/cover1.jpg')}}" alt="lamp">
                 </div>
             </div>
             <div class="col-md-6 textServices">
-                <h1>Drivvy</h1>
+                <h1 class="ml-5">Drivvy</h1>
                 <p>Drivy is a car rental company that was founded in 2023. We are  
                   <br>committed to providing our customers with a convenient and 
                   <br>affordable way to rent a car. We are always committed to :</p>
-                <ul>
+                <ul>  
                     <li>Offering budget-friendly car rentals</li>
                     <li>Delivering excellent customer service</li>
                     <li>Ensuring convenient car rentals for our customers</li>

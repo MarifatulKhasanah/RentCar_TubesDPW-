@@ -21,10 +21,10 @@ return new class extends Migration
             $table->string('transmisi');
             $table->string('status');
             $table->string('deskripsi');
-            $table->boolean('p3k');
-            $table->boolean('charger');
-            $table->boolean('audio');
-            $table->boolean('ac');
+            $table->integer('p3k');
+            $table->integer('charger');
+            $table->integer('audio');
+            $table->integer('ac');
             $table->timestamps();
         });
     }
