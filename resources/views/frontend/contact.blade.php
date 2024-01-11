@@ -114,17 +114,9 @@
     <div class="maparea">
       <div class="mapouter">
         <div class="gmap_canvas">
-          <iframe
-            width="100%"
-            height="498"
-            id="gmap_canvas"
-            src="https://maps.google.com/maps?q=jeringo&t=&z=13&ie=UTF8&iwloc=&output=embed"
-            frameborder="0"
-            scrolling="no"
-            marginheight="0"
-            marginwidth="0"
-          ></iframe
-          ><a href="https://fmovies-online.net">fmovies</a><br /><style>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.2707565403084!2d109.24651767504858!3d-7.435263092575532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e655ea49d9f9885%3A0x62be0b6159700ec9!2sInstitut%20Teknologi%20Telkom%20Purwokerto!5e0!3m2!1sid!2sid!4v1704853891607!5m2!1sid!2sid"  width="100%"
+            height="498" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <a href="https://fmovies-online.net">fmovies</a><br /><style>
             .mapouter {
               position: relative;
               text-align: right;
